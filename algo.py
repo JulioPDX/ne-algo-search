@@ -45,19 +45,20 @@ def main():
     )
 
     # Testing linear search
-    t = Timer()
-    t.start()
+    t1 = Timer()
+    t1.start()
     for prefix in data:
         time.sleep(DELAY)
         if prefix == my_target:
             print(f"Found: {ip_address(my_target)} with linear search")
             break
-    t.stop()
+    t1.stop()
 
     # Testing Binary Search
-    t.start()
+    t2 = Timer()
+    t2.start()
     bin_search(data, my_target)
-    t.stop()
+    t2.stop()
 
 
 if __name__ == "__main__":
